@@ -1,0 +1,33 @@
+.homeContainer{
+    background-color: #000814;
+   
+}
+.back-home{
+
+    background-image: url('../assets/mern-stack.png');
+    background-size: cover;
+    border-radius: 5px;
+    height: 500px;
+    width: 100%;
+   text-align: center;
+   padding-top: 80px;
+}
+.text-top{
+    color: #e0e1dd !important;
+    font-size: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.text-sec{
+    font-size: 40px;
+    font-weight: 750;
+    color: #e0e1dd !important;
+    font-family: 'Times New Roman', Times, serif;
+}
+.button-project{
+    border-radius: 10px;
+    padding: 10px 45px;
+    background-color: #415a77cc;
+    color: #e0e1dd;
+    border: 1px solid ;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}

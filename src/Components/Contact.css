@@ -1,0 +1,77 @@
+.contact-container {
+    background-color: #000814;
+    color: #e0e1dd !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adds a border and a subtle box shadow to the form container */
+.contact-form {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #778da9; /* Adds a border */
+    border-radius: 10px; /* Rounds the corners slightly */
+    background-color: #000814; /* Slightly different background */
+    box-shadow: 3px 3px 10px rgba(119, 141, 169, 0.2); /* Adds a soft shadow */
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.email-link a {
+    color: #415a77;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-hold {
+    background-color: #000814 !important;
+    border: none !important;
+    border-bottom: 1px solid #778da9 !important;
+    border-radius: 0 !important;
+    color: #e0e1dd !important;
+    padding-left: 0 !important;
+    box-shadow: none !important;
+}
+
+.text-hold:focus {
+    outline: none !important;
+    border-bottom: 2px solid #fff !important;
+    box-shadow: none !important;
+}
+
+.submit-btn {
+    border-radius: 25px;
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    background-color: #0d1b2a !important;
+    color: #778da9 !important;
+    border: 1px solid #778da9 !important;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #415a77cc !important;
+    color: #e0e1dd !important;
+    border: 1px solid #e0e1dd !important;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #778da9 ;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #e0e1dd;
+}

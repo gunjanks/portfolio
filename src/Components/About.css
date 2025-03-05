@@ -1,0 +1,55 @@
+.AboutContainer{
+    background-color: #000814;
+    color: #e0e1dd !important;
+}
+.img-border{
+    border: 5px solid #415a77;
+  margin-right: 60px;
+  border-radius: 6px;
+}
+.image-full{
+    margin-top: -40px;
+    margin-left: -40px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+.head-About{
+    font-size: 22px;
+    color: #778da9;
+}
+.text-first{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 15px ;
+}
+.text-second{
+    font-size: 15px;
+    padding-top: 10px;
+    
+}
+.Hire-btn{
+    background-color: #415a77cc;
+    color: #e0e1dd;
+    border: 1px solid  #e0e1dd;
+    border-radius: 8px !important;
+}
+.Hire-btn:hover{
+    background-color: #0d1b2a !important;
+    color: #778da9 !important;
+    border: 1px solid #778da9  !important ;
+    transition: 1s;
+
+}
+
+.Resume-btn{
+    background-color: #0d1b2a !important;
+    color: #778da9 !important;
+    border: 1px solid #778da9  !important ;
+    border-radius: 8px !important;
+}
+.Resume-btn:hover{
+    background-color: #415a77cc !important;
+    color: #e0e1dd !important;
+    border: 1px solid  #e0e1dd !important;
+    transition: 1s;
+}

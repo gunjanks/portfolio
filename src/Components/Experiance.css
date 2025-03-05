@@ -1,0 +1,67 @@
+.ExperianceContainer {
+    background-color: #000814;
+    color: #e0e1dd !important;
+
+}
+
+.headExp {
+    font-size: 22px;
+    color: #778da9;
+}
+
+.complecard {
+    border: 4px solid #415a77;
+    box-shadow: 0 0 20px rgba(65, 90, 119, 0.8),
+        0 0 40px rgba(65, 90, 119, 0.6),
+        0 0 60px rgba(65, 90, 119, 0.4);
+    border-radius: 10px;
+
+}
+
+.expbtn {
+    background-color: #0d1b2a !important;
+    color: #778da9 !important;
+    border: 1px solid #778da9 !important;
+    border-radius: 8px !important;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.expbtn:hover {
+    background-color: #415a77cc !important;
+    color: #e0e1dd !important;
+    border: 1px solid #e0e1dd !important;
+    transition: 1s !important;
+}
+
+.exptext{
+    font-size: 13px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.head-modal{
+    font-family: 'Times New Roman', Times, serif;
+    color: #778da9;
+}
+.hedingexp{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #415a77
+}
+.modal-card {
+    background: #0d1b2a;
+    color: #e0e1dd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    
+}
+.secheadexp{
+    color: #778da9;
+}
+
+/* Blur Effect on Background when Modal is Open */
+.blur-background {
+    filter: blur(5px);
+    pointer-events: none;
+}
