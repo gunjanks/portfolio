@@ -77,6 +77,9 @@ const Contact = () => {
         <a href="https://github.com/gunjanks">
           <i className="fa-brands fa-github"></i>
         </a>
+        <a href="mailto:salunkegunjank22@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        </a>
       </div>
 
       {/* Modal */}

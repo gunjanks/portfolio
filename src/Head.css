@@ -1,31 +1,53 @@
-.head-back{
-    background-color:#1b263b;
+.head-back {
+    background-color: #1b263b;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
-.Navlinks:hover{
-    color: #e0e1dd !important;
-    
+
+/* Navbar Toggle Button (Hamburger Menu) */
+.navbar-toggler {
+    border: 1px solid #778da9 !important; /* Border color changed */
+    background-color: transparent !important;
 }
-.Navlinks{
+
+.navbar-toggler-icon {
+    filter: brightness(0) saturate(100%) invert(63%) sepia(12%) saturate(350%) hue-rotate(180deg) brightness(90%) contrast(85%);
+    /* This changes the icon color to #778da9 */
+}
+
+/* Navbar Links */
+.Navlinks {
     font-size: 15px !important;
     font-weight: 700 !important;
     color: #778da9 !important;
 }
-.Navbutton{
+
+.Navlinks:hover {
+    color: #e0e1dd !important;
+}
+
+/* Contact Button */
+.Navbutton {
     font-size: 15px !important;
     font-weight: 700 !important;
     border-radius: 13px !important;
     background-color: #415a77cc !important;
     color: #e0e1dd !important;
     border: 1px solid #e0e1dd !important;
-    font-family:Georgia, 'Times New Roman', Times, serif !important;
-
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
 }
-.Navbutton:hover{
+
+.Navbutton:hover {
     background-color: #0d1b2a !important;
     color: #778da9 !important;
-    border: 1px solid #778da9  !important ;
+    border: 1px solid #778da9 !important;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .navbar-toggler {
+        border-color: #778da9 !important; /* Ensure border color on mobile */
+    }
 }

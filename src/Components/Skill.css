@@ -1,13 +1,54 @@
-.SkillContainer{
+.SkillContainer {
     background-color: #000814;
     color: #e0e1dd !important;
-    
-}
-.text-lang{
-   
-    font-size: 20px;
-    font-weight: 500;
-}
-.complete{
     text-align: center;
+}
+
+.headExp {
+    font-size: 28px;
+    font-weight: bold;
+    color: #778da9;
+}
+
+.text-lang {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.complete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.skill-img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-lang {
+        font-size: 16px;
+    }
+    .skill-img {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-lang {
+        font-size: 14px;
+    }
+    .skill-img {
+        width: 70px;
+    }
 }

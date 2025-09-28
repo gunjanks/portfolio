@@ -1,21 +1,45 @@
 .ExperianceContainer {
     background-color: #000814;
     color: #e0e1dd !important;
-
 }
 
 .headExp {
     font-size: 22px;
     color: #778da9;
+    margin-bottom: 15px;
 }
 
 .complecard {
-    border: 4px solid #415a77;
+    border: 3px solid #415a77;
     box-shadow: 0 0 20px rgba(65, 90, 119, 0.8),
-        0 0 40px rgba(65, 90, 119, 0.6),
-        0 0 60px rgba(65, 90, 119, 0.4);
+        0 0 40px rgba(65, 90, 119, 0.7),
+        0 0 60px rgba(65, 90, 119, 0.5);
     border-radius: 10px;
+    background-color: #0d1b2a;
+}
 
+.exp-section {
+    margin-bottom: 20px;
+}
+
+.duration {
+    font-size: 14px;
+    font-style: italic;
+    color: #ccc;
+}
+
+.read-more-text {
+    color: #778da9;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+.read-more-text:hover {
+    color: #e0e1dd;
+    text-decoration: underline;
 }
 
 .expbtn {
@@ -26,7 +50,6 @@
     padding: 10px 15px;
     cursor: pointer;
     margin-top: 10px;
-
 }
 
 .expbtn:hover {
@@ -36,31 +59,36 @@
     transition: 1s !important;
 }
 
-.exptext{
+.exptext {
     font-size: 13px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.head-modal{
+
+.head-modal {
     font-family: 'Times New Roman', Times, serif;
     color: #778da9;
 }
-.hedingexp{
-    font-family:Arial, Helvetica, sans-serif;
-    color: #415a77
+
+.hedingexp {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #415a77;
 }
+
 .modal-card {
     background: #0d1b2a;
     color: #e0e1dd;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-    
-}
-.secheadexp{
-    color: #778da9;
 }
 
-/* Blur Effect on Background when Modal is Open */
+.secheadexp {
+    color: #778da9;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
 .blur-background {
     filter: blur(5px);
     pointer-events: none;

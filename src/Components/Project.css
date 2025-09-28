@@ -1,122 +1,141 @@
 .complete-contain {
-    background-color: #000814;
-    color: #e0e1dd !important;
+  background-color: #000814;
+  color: #e0e1dd !important;
 }
 
 .slider-container {
-    width: 85%;
-    margin: auto;
-    padding: 40px 0;
+  width: 85%;
+  margin: auto;
+  padding: 40px 0;
 }
 
 .slider-title {
-    color: #778da9;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  color: #778da9;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .slick-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide-item {
-    padding: 20px;
+  padding: 20px;
 }
 
-/* 🆕 Responsive Card */
+/* 🆕 Consistent Card Height */
 .project-card {
-    background: #415a77;
-    color: #e0e1dd;
-    padding: 15px;
-    min-height: 450px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: #415a77;
+  color: #e0e1dd;
+  padding: 15px;
+  height: 450px; /* Fixed height for all cards */
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .project-card:hover {
-    transform: scale(1.07);
+  transform: scale(1.07);
 }
 
 /* 🆕 Image Scaling */
 .project-img {
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+  height: 200px; /* Same height for all images */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .project-img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* 🆕 Button Styling */
 .buttpro1,
 .buttpro2 {
-    padding: 8px 14px;
-    font-size: 14px;
-    border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  margin: 5px;
 }
 
 .buttpro1 {
-    background-color: #0d1b2a !important;
-    color: #778da9 !important;
-    border: 1px solid #778da9 !important;
+  background-color: #0d1b2a !important;
+  color: #778da9 !important;
+  border: 1px solid #778da9 !important;
 }
 .buttpro1:hover {
-    background-color: #415a77cc !important;
-    color: #e0e1dd !important;
-    border: 1px solid #e0e1dd !important;
+  background-color: #415a77cc !important;
+  color: #e0e1dd !important;
+  border: 1px solid #e0e1dd !important;
 }
 
 .buttpro2 {
-    background-color: #415a77cc !important;
-    color: #e0e1dd !important;
-    border: 1px solid #e0e1dd !important;
+  background-color: #415a77cc !important;
+  color: #e0e1dd !important;
+  border: 1px solid #e0e1dd !important;
 }
 .buttpro2:hover {
-    background-color: #0d1b2a !important;
-    color: #778da9 !important;
-    border: 1px solid #778da9 !important;
+  background-color: #0d1b2a !important;
+  color: #778da9 !important;
+  border: 1px solid #778da9 !important;
+}
+
+/* 🆕 Align Buttons at Bottom */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.project-buttons {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* 🆕 Mobile View Fix */
 @media (max-width: 768px) {
-    .slider-container {
-        width: 100%;
-        padding: 20px 10px;
-    }
+  .slider-container {
+    width: 100%;
+    padding: 20px 10px;
+  }
 
-    .slide-item {
-        padding: 10px;
-    }
+  .slide-item {
+    padding: 10px;
+  }
 
-    .project-card {
-        min-height: 380px;
-        width: 90%;
-        margin: auto;
-        padding: 12px;
-    }
+  .project-card {
+    height: 380px; /* Smaller fixed height for mobile */
+    width: 90%;
+    margin: auto;
+    padding: 12px;
+  }
 
-    .project-img {
-        height: 150px;
-        width: 100%;
-        object-fit: cover;
-    }
+  .project-img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
 
-    .buttpro1,
-    .buttpro2 {
-        font-size: 13px;
-        padding: 7px 14px;
-        width: 100%;
-    }
+  .buttpro1,
+  .buttpro2 {
+    font-size: 13px;
+    padding: 7px 14px;
+    width: auto;
+  }
 
-    .card-body div {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
+  .project-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
 }

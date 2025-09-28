@@ -1,22 +1,23 @@
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-import './About.css';
-import Gunjan from '../assets/Gunjan.png';
-import Resume from '../pdfs/Gunjan resume.pdf';
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import "./About.css";
+import Gunjan from "../assets/GunjanSalunke.jpg";
+import Resume from "../pdfs/GunjanSalunkeResume.pdf";
+
 const About = () => {
   const navigate = useNavigate();
 
   const handleHireMe = () => {
-    navigate('/contact'); 
+    navigate("/contact");
   };
 
   const handleResume = () => {
     const resumeUrl = Resume;
-    window.open(resumeUrl, '_blank'); 
-    const link = document.createElement('a');
+    window.open(resumeUrl, "_blank");
+    const link = document.createElement("a");
     link.href = resumeUrl;
-    link.download = 'Gunjan resume.pdf'; 
+    link.download = "Gunjan resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -25,24 +26,32 @@ const About = () => {
   return (
     <Container fluid className="AboutContainer">
       <Container className="p-5">
-        <Row>
-          <Col lg={1}></Col>
-          <Col lg={4}>
+        <Row className="align-items-center">
+          <Col lg={1} xs={0}></Col>
+          <Col lg={3} xs={12} className="text-center">
             <div className="img-border">
-              <img src={Gunjan} alt="Gunjan Salunke" height={300} className="image-full" />
+              <img
+                src={Gunjan}
+                alt="Gunjan Salunke"
+                className="image-full img-fluid"
+              />
             </div>
           </Col>
-          <Col lg={6}>
+          <Col lg={7} xs={12} className="text-center text-lg-start">
             <div>
-              <b className="head-About " >About Me</b>
+              <b className="head-About">About Me</b>
               <br />
-              <span className="text-first ">
-                I'm <b style={{ color: '#415a77' }}>Gunjan Salunke</b>, a "MERN Full Stack Web Developer"
+              <span className="text-first">
+                I'm <b style={{ color: "#415a77" }}>Gunjan Salunke</b>, a{" "}
+                "Java Full Stack and MERN Stack Developer"
               </span>
-              <p className="text-second">
-                Dynamic <b>6 Month’s</b> experience & solid foundation in MERN (MongoDB, Express.js, React, Node.js) full-stack web development.
-                Possesses hands-on experience gained through academic projects and personal initiatives, showcasing proficiency in front-end and
-                back-end development technologies. Strong understanding of JavaScript fundamentals, responsive web design, and RESTful API integration.
+              <p className="text-second pb-3">
+                Passionate developer with <b>1+ year of experience</b> in both{" "}
+                <b>Java Full Stack</b> and <b>MERN Stack (MongoDB, Express.js, React, Node.js)</b>{" "}
+                web development. Skilled in building scalable, user-friendly applications with a 
+                strong command of front-end and back-end technologies. Proven ability to deliver
+                responsive designs, perform efficient RESTful API integrations, and implement
+                robust Java-based solutions across various projects.
               </p>
             </div>
             <div>

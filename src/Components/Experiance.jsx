@@ -3,53 +3,66 @@ import { Container, Modal, Button } from "react-bootstrap";
 import "./Experiance.css";
 
 const Experiance = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [showSumagoModal, setShowSumagoModal] = useState(false);
 
   return (
-    <div className={showModal ? "blur-background" : ""}>
+    <div className={showSumagoModal ? "blur-background" : ""}>
       <Container fluid className="ExperianceContainer p-4">
         <Container>
           <div className="complecard p-5">
-            <b className="headExp">Work Experience </b>
-            <p>Sumago Infotech Pvt. Ltd.  (8th April 2024 – 8th October 2024) </p>
-            <b>Roles and Responsibilities:</b><br />
-            <span>
-              <b>Front End Developer:</b> Proficient in React.js for building interactive user interfaces, managing state with Redux & integrating with RESTful APIs.<br />
-              <b>Back End Developer:</b> Good in Node.js and Express.js for server-side development, creating APIs, and handling HTTP requests.<br />
-              <b>Database Management:</b> Familiarity with MongoDB for NoSQL database operations, including CRUD operations and schema design.
-            </span>
-            <button className="expbtn" onClick={() => setShowModal(true)}>Read More</button>
+            <b className="headExp">Work Experience</b>
+
+            {/* Sumago Experience */}
+            <div className="exp-section">
+              <span><b>Sumago Infotech Pvt. Ltd.</b> – MERN Stack Trainee Intern</span><br></br>
+              <span className="duration">April 2024 – october 2024</span>
+              <p>
+                Worked on full-stack applications using React, Node, Express, and MongoDB. Gained hands-on experience in API development and frontend design.
+              </p>
+              <span className="read-more-text" onClick={() => setShowSumagoModal(true)}>READ MORE...</span>
+            </div>
           </div>
         </Container>
       </Container>
+
+      {/* Modal: Sumago */}
       <Modal
-        show={showModal}
-        onHide={() => setShowModal(false)}
+        show={showSumagoModal}
+        onHide={() => setShowSumagoModal(false)}
         centered
         backdrop="static"
         className="custom-modal"
       >
         <Modal.Body className="modal-card">
-          <h5 className="head-modal" >As a MERN Stack Trainee</h5>
-          <p>
-            <b className="hedingexp">Roles and Responsibilities :-</b><br></br>
-            <b className="secheadexp">Front End Developer :</b> <span className="exptext">Proficient in React.js for building interactive user interfaces, managing state with Redux & integrating with RESTful APIs.</span><br></br>
-            <b className="secheadexp">Back End Developer :</b> <span className="exptext"> Good in Node.js and Express.js for server-side development, creating APIs, and handling HTTP requests.</span><br></br>
-            <b className="secheadexp">Database Management :</b><span className="exptext"> Familiarity with MongoDB for NoSQL database operations, including CRUD operations and schema design.</span><br></br>
-            <b className="secheadexp">Version Control :</b><span className="exptext"> Proficient with Git for version control, including branching, merging, and collaboration via platforms like GitHub.</span><br></br>
-            <b className="secheadexp">Version Control :</b><span className="exptext"> Using version control systems like Git for code management and collaboration. Participating in code reviews and ensuring code quality.</span><br></br>
-            <b className="secheadexp">MongoDB :</b> <span className="exptext"> NoSQL database, often used for its scalability and flexibility. Uses JSON-like documents (BSON format) for data storage. Schema free, allowing for easier data manipulation & integration.</span><br></br>
-            <b className="secheadexp">Express.js :</b> <span className="exptext"> Web application framework for Node.js. Simplifies the creation of APIs and handling of HTTP requests.</span><br></br>
-            <b className="secheadexp">React :</b><span className="exptext"> JavaScript library for building user interfaces. Virtual DOM for efficient rendering of UI components. Widely used for building single-page applications (SPAs) and progressive web applications (PWAs).</span><br></br>
-            <b className="secheadexp">Node.js :</b><span className="exptext"> JavaScript runtime environment built on Chrome’s V8 engine. execute JavaScript code on the server-side. Non-blocking, I/O model for handling concurrent connections efficiently.</span><br></br>
-            <b className="secheadexp">Deployment and Maintenance :</b><span className="exptext"> Assisting in deploying applications to web servers. Monitoring and maintaining applications post-launch.</span><br></br>
-            <span className="exptext">Managing different technologies and ensuring compatibility between versions.</span><br></br>
-            <b className="secheadexp">Collaboration :</b> <span className="exptext">Effective communicator with a demonstrated ability to work in cross-functional teams, contributing to project success through teamwork and adaptability.</span><br></br>
+          <h5 className="head-modal">Sumago Infotech Pvt. Ltd. – MERN Stack Trainee</h5>
+          <p className="duration">Jan 2024 – April 2024</p>
 
+          <b className="secheadexp">Frontend (React.js):</b>
+          <p className="exptext">
+            Built dynamic UI with React and managed component state using Redux. Focused on responsive design.
           </p>
-          <Button className="expbtn"  onClick={() => setShowModal(false)}>
-            Close
-          </Button>
+
+          <b className="secheadexp">Backend (Node.js + Express.js):</b>
+          <p className="exptext">
+            Created RESTful APIs, implemented routing and middleware, and secured endpoints.
+          </p>
+
+          <b className="secheadexp">Database (MongoDB):</b>
+          <p className="exptext">
+            Performed CRUD operations, modeled flexible schemas, and worked with collections.
+          </p>
+
+          <b className="secheadexp">Version Control:</b>
+          <p className="exptext">
+            Used Git and GitHub for code tracking and team collaboration.
+          </p>
+
+          <b className="secheadexp">Team Collaboration:</b>
+          <p className="exptext">
+            Participated in Agile activities and delivered assigned modules on time.
+          </p>
+
+          <Button className="expbtn" onClick={() => setShowSumagoModal(false)}>Close</Button>
         </Modal.Body>
       </Modal>
     </div>

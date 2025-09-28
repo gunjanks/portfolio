@@ -1,33 +1,170 @@
-.homeContainer{
-    background-color: #000814;
-   
+/* Main Container */
+.homeContainer {
+  background-color: #000814;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
-.back-home{
 
-    background-image: url('../assets/mern-stack.png');
-    background-size: cover;
-    border-radius: 5px;
-    height: 500px;
-    width: 100%;
-   text-align: center;
-   padding-top: 80px;
+/* Background Section with video */
+.back-home {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden; /* hide overflow */
+  border-radius: 10px; /* optional rounded corners */
+  padding: 0;
 }
-.text-top{
-    color: #e0e1dd !important;
-    font-size: 25px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+/* Fullscreen video styling */
+.back-home video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover container */
+  z-index: 0; /* behind content */
 }
-.text-sec{
-    font-size: 40px;
-    font-weight: 750;
-    color: #e0e1dd !important;
-    font-family: 'Times New Roman', Times, serif;
+
+/* Optional dark overlay to make text stand out */
+.back-home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* adjust opacity */
+  z-index: 0.5;
 }
-.button-project{
-    border-radius: 10px;
-    padding: 10px 45px;
-    background-color: #415a77cc;
-    color: #e0e1dd;
-    border: 1px solid ;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+
+/* Content inside the Background */
+.home-content {
+  position: relative;
+  z-index: 1; /* above video */
+  top: 20%; /* Slightly lower than center */
+  transform: translateY(-50%);
+  width: 80%;
+}
+
+/* Top Text */
+.text-top {
+  color: #e0e1dd;
+  font-size: 28px;
+  font-family: "Lucida Sans", sans-serif;
+}
+
+/* Main Heading */
+.text-sec {
+  font-size: 40px;
+  font-weight: 750;
+  color: #e0e1dd;
+  font-family: "Times New Roman", Times, serif;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Button */
+.button-project {
+  border-radius: 5px;
+  padding: 10px 40px;
+  background-color: #415a77cc;
+  color: #e0e1dd;
+  border: 1px solid #e0e1dd;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 30px;
+}
+
+.button-project:hover {
+  background-color: #1b263b;
+  transform: scale(1.01);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .back-home {
+    height: 450px;
+  }
+  .text-top {
+    font-size: 24px;
+  }
+  .text-sec {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homeContainer {
+    padding: 10px;
+  }
+  .back-home {
+    height: 420px;
+    width: 95%;
+  }
+  .home-content {
+    top: 57%;
+  }
+  .text-top {
+    font-size: 22px;
+  }
+  .text-sec {
+    font-size: 30px;
+  }
+  .button-project {
+    padding: 10px 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .homeContainer {
+    padding: 10px;
+  }
+  .back-home {
+    height: 380px;
+  }
+  .home-content {
+    top: 25%;
+  }
+  .text-top {
+    font-size: 20px;
+  }
+  .text-sec {
+    font-size: 26px;
+  }
+  .button-project {
+    padding: 8px 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .back-home {
+    height: 350px;
+  }
+  .home-content {
+    top: 20%;
+  }
+  .text-top {
+    font-size: 18px;
+  }
+  .text-sec {
+    font-size: 24px;
+  }
+  .button-project {
+    padding: 6px 25px;
+    font-size: 13px;
+  }
 }

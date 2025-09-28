@@ -8,13 +8,15 @@ import img1 from "../assets/Furniture.png";
 import img2 from "../assets/flex_landing.png";
 import img3 from "../assets/Food_project.png";
 import img4 from "../assets/literate.png";
+import img5 from "../assets/calculator.jpg";
 import placeholderImage from "../assets/nit.png"; // Placeholder image
 
 const projects = [
   {
     id: 1,
     name: "Furniture Website",
-    technology: "Built with HTML, CSS, and JavaScript, displaying furniture products with a responsive design.",
+    technology:
+      "Built with HTML, CSS, and JavaScript, displaying furniture products with a responsive design.",
     server: "Live Server",
     image: img1,
     pdf: "../pdfs/furniture.pdf",
@@ -22,7 +24,8 @@ const projects = [
   {
     id: 2,
     name: "Flex Landing Page",
-    technology: "A simple and responsive landing page built with HTML & CSS, showcasing a clean design.",
+    technology:
+      "A simple and responsive landing page built with HTML & CSS, showcasing a clean design.",
     server: "Live Server",
     image: img2,
     pdf: "/pdfs/project2.pdf",
@@ -30,7 +33,8 @@ const projects = [
   {
     id: 3,
     name: "Foodies Website",
-    technology: "A food-related website using HTML, CSS, and JavaScript, featuring interactive UI elements.",
+    technology:
+      "A food-related website using HTML, CSS, and JavaScript, featuring interactive UI elements.",
     server: "Live Server",
     image: img3,
     pdf: "../pdfs/foodies.pdf",
@@ -38,7 +42,8 @@ const projects = [
   {
     id: 4,
     name: "Literate Website",
-    technology: "An educational platform made with HTML, CSS, and JavaScript, deployed on Vercel.",
+    technology:
+      "An educational platform made with HTML, CSS, and JavaScript, deployed on Vercel.",
     server: "Vercel",
     image: img4,
     pdf: "../pdfs/literate.pdf",
@@ -46,9 +51,19 @@ const projects = [
   {
     id: 5,
     name: "NIT College Website",
-    technology: "An official college website developed using HTML, CSS, and PHP, hosted on XAMPP.",
+    technology:
+      "An official college website developed using HTML, CSS, and PHP, hosted on XAMPP.",
     server: "XAMPP",
     link: "https://www.nitnasik.com/",
+  },
+  {
+    id: 6,
+    name: "Calculator using basics Java",
+    technology:
+      "A simple calculator application developed using Core Java implementing basic arithmetic operations.",
+    server: "Standalone Java Application",
+    image: img5,
+    // link: "https://github.com/gunjanks/Calculator-using-basics-java",
   },
 ];
 
@@ -103,24 +118,31 @@ const Projects = () => {
                   className="project-img"
                 />
                 <Card.Body className="card-body">
-                  <Card.Title style={{color:'#000814'}}>{project.name}</Card.Title>
+                  <Card.Title style={{ color: "#000814" }}>
+                    {project.name}
+                  </Card.Title>
                   <Card.Text>
                     <strong>Info:</strong> {project.technology}
+                    <br />
+                    <strong>Server:</strong> {project.server}
                   </Card.Text>
 
-                  <div>
+                  <div className="project-buttons">
                     {project.image && (
-                      <Button className="buttpro1" onClick={() => handleShow(project.image)}>
+                      <Button
+                        className="buttpro1"
+                        onClick={() => handleShow(project.image)}
+                      >
                         View
                       </Button>
                     )}
-                    {/* {project.pdf && (
-                      <Button className="buttpro2" onClick={() => window.open(project.pdf, "_blank")}>
-                        PDF
-                      </Button>
-                    )} */}
                     {project.link && (
-                      <Button className="buttpro1" onClick={() => window.open(project.link, "_blank")}>
+                      <Button
+                        className="buttpro1"
+                        onClick={() =>
+                          window.open(project.link, "_blank")
+                        }
+                      >
                         Live
                       </Button>
                     )}
@@ -131,10 +153,13 @@ const Projects = () => {
           ))}
         </Slider>
 
-     
         <Modal show={showModal} onHide={() => setShowModal(false)} centered>
           <Modal.Body style={{ backgroundColor: "#000814" }}>
-            <img src={selectedImage} alt="Project Screenshot" className="img-fluid" />
+            <img
+              src={selectedImage}
+              alt="Project Screenshot"
+              className="img-fluid"
+            />
           </Modal.Body>
           <Modal.Footer style={{ backgroundColor: "#000814" }}>
             <Button variant="secondary" onClick={() => setShowModal(false)}>
